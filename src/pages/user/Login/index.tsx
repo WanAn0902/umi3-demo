@@ -13,8 +13,10 @@ import { useIntl, Link, history, FormattedMessage, SelectLang, useModel } from '
 import Footer from '@/components/Footer';
 import { login } from '@/services/ant-design-pro/api';
 import { getFakeCaptcha } from '@/services/ant-design-pro/login';
-
 import styles from './index.less';
+
+const logo = require('@/assets/Ivy.png');
+
 
 const LoginMessage: React.FC<{
   content: string;
@@ -84,11 +86,11 @@ const Login: React.FC = () => {
         <div className={styles.top}>
           <div className={styles.header}>
             <Link to="/">
-              <img alt="logo" className={styles.logo} src="/logo.svg" />
-              <span className={styles.title}>Ant Design</span>
+              <img alt="logo" className={styles.logo} src={logo} />
+              <span className={styles.title}>Ivy的Demo</span>
             </Link>
           </div>
-          <div className={styles.desc}>Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+          <div className={styles.desc}>umi 3 + React + Ant Design Pro</div>
         </div>
 
         <div className={styles.main}>
@@ -126,6 +128,7 @@ const Login: React.FC = () => {
               />
               <Tabs.TabPane
                 key="mobile"
+                disabled
                 tab={intl.formatMessage({
                   id: 'pages.login.phoneLogin.tab',
                   defaultMessage: '手机号登录',
@@ -173,7 +176,7 @@ const Login: React.FC = () => {
                   }}
                   placeholder={intl.formatMessage({
                     id: 'pages.login.password.placeholder',
-                    defaultMessage: '密码: ant.design',
+                    defaultMessage: '密码: 123',
                   })}
                   rules={[
                     {
