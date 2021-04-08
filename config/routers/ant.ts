@@ -1,4 +1,4 @@
-﻿export default [
+export default [
   {
     path: '/user',
     layout: false,
@@ -41,12 +41,5 @@
     icon: 'table',
     path: '/list',
     component: './TableList',
-  },
-  {
-    path: '/',
-    redirect: '/welcome',
-  },
-  {
-    component: './404',
   },
 ];

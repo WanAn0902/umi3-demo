@@ -9,7 +9,7 @@ import {
 import { Alert, Space, message, Tabs } from 'antd';
 import React, { useState } from 'react';
 import ProForm, { ProFormCaptcha, ProFormCheckbox, ProFormText } from '@ant-design/pro-form';
-import { useIntl, Link, history, FormattedMessage, SelectLang, useModel } from 'umi';
+import { useIntl, Link, history, FormattedMessage, useModel } from 'umi';
 import Footer from '@/components/Footer';
 import { login } from '@/services/ant-design-pro/api';
 import { getFakeCaptcha } from '@/services/ant-design-pro/login';
@@ -81,7 +81,7 @@ const Login: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.lang}>{SelectLang && <SelectLang />}</div>
+      {/* <div className={styles.lang}>{SelectLang && <SelectLang />}</div> */}
       <div className={styles.content}>
         <div className={styles.top}>
           <div className={styles.header}>
