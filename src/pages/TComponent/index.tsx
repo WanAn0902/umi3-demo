@@ -1,4 +1,6 @@
 import { PageContainer } from '@ant-design/pro-layout';
+import { Button } from 'antd';
+import { useState } from 'react';
 import MapList from './components/MapList';
 
 const list = [
@@ -11,8 +13,27 @@ const list = [
 ];
 
 const TComponent: React.FC = () => {
+  const [stateA, setStateA] = useState<number>(0);
+  let a = 0;
+
+  function addA() {
+    a =+ 1;
+  }
+
+  function addStateA() {
+    setStateA(stateA+1);
+  }
+
+  function onConsole() {
+    console.log("a", a);
+    console.log("stateA", stateA);
+  }
+
   return (
     <PageContainer title="泛型组件">
+      <Button type="primary" onClick={addA} style={{ marginRight: 15 }}>{`a+1(${a})`}</Button>
+      <Button type="primary" onClick={addStateA} style={{ marginRight: 15 }}>{`stateA+1(${stateA})`}</Button>
+      <Button type="primary" onClick={onConsole}>console</Button>
       <MapList 
         list={list}
         renderItem={(item) => (<p key={item.id}>{`${item.id}、${item.name}有￥${item.amount.toFixed(2)}`}</p>)}
