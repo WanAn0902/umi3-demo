@@ -17,7 +17,7 @@ const TComponent: React.FC = () => {
   let a = 0;
 
   function addA() {
-    a =+ 1;
+    a =+ 1;  //此处拿到的a永远是0
   }
 
   function addStateA() {
