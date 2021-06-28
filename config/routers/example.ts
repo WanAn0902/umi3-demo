@@ -6,7 +6,7 @@ export default [
   },
   {
     path: '/ClosurePractice',
-    name: '闭包的练习',
+    name: '闭包/CSS',
     component: './Closure',
   },
   {
